@@ -1,0 +1,128 @@
+.d {
+  display: flex;
+}
+.g{
+  display: grid;
+}
+.d-n{
+  display: none;
+}
+.j {
+  justify-content: center;
+}
+.a {
+  align-items: center;
+}
+.ae {
+  align-items: flex-end;
+}
+.as {
+  align-items: flex-start;
+}
+.jl {
+  justify-content: left;
+}
+.jr {
+  justify-content: right;
+}
+.fc{
+  flex-direction: column;
+}
+.dja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bdr{
+  border-width: 2px;
+  border-style: solid;
+  border-color: #86d1ff #013c61 #044c94 #50bcff;
+}
+/* ------- before light ------- */
+.bl::before {
+  content: "";
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  border-radius: 10px;
+  width: 94%;
+  height: 47%;
+  background: rgba(255, 255, 255, 0.04);
+  z-index: 1;
+}
+
+/* ----- border ------ */
+.bdr {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #86d1ff #013c61 #044c94 #50bcff;
+  box-shadow: inset 0 0.9px 4px #000000, -2px -2px 4px #000000;
+}
+
+.b1 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background: linear-gradient(-40deg, #2d1e8a, #6a5acd);
+}
+.b2 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background: linear-gradient(-40deg, #ff970f, #fff700);
+}
+
+.light::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 150px;
+  top: -40px;
+  left: -40px;
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: rotate(315deg);
+  z-index: -1;
+  animation: animate_sine linear 5s infinite;
+}
+@keyframes animate_sine {
+  0% {
+    left: -40px;
+  }
+  100% {
+    left: 3000px;
+  }
+}
+.outl {
+  outline: solid 1px #f00;
+}
+.lodeX{
+  position: relative;
+  width: 250px;
+  height: 10px;
+  margin: 6px 0;
+  background: transparent;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.lodeX::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200%;
+  height: 10px;
+  background: transparent;
+}
+.lodeX.active::before{
+  background: repeating-linear-gradient(-25deg, #fff, #fff 4px, #000 4px, #000 8px);
+  box-shadow: 0 0 1px #000, 0 0 3px #000;
+  animation: Xlodeing linear 4s infinite;
+}
+@keyframes Xlodeing {
+  to{
+    left: 0;
+  }from{
+    left: -89%;
+  }
+}

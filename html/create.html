@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Calendar Account</title>
+    <link rel="stylesheet" href="../css/css_library.css" />
+    <link rel="stylesheet" href="../css/create.css" /> 
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <script defer src="../js/libary.js"></script>
+    <script defer src="../js/config.js"></script>
+    <script defer type="module" src="../js/create.js"></script>
+  </head>
+  <body class="dja">
+    <div class="login_fild dja">
+      <form class="contaner dja" id="post">
+        <p class="heading dja">Sign Up</p>
+        <br />
+        <div class="cover">
+          <div class="out dja">
+            <input
+              type="text"
+              id="full_name"
+              spellcheck="false"
+              name="full_name"
+              autocomplete="off"
+              class="Input"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <p>Full Name</p>
+        </div>
+        <div class="cover">
+          <div class="out dja">
+            <input
+              type="text"
+              id="username"
+              autocomplete="off"
+              spellcheck="false"
+              name="username"
+              class="Input"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <p class="status_user">Username</p>
+        </div>
+        <div class="cover">
+          <div class="out dja">
+            <input
+              type="email"
+              id="email"
+              autocomplete="off"
+              spellcheck="false"
+              name="email"
+              required
+              class="Input"
+              autocomplete="off"
+            />
+          </div>
+          <p class="status_user">Email</p>
+        </div>
+        <div class="cover">
+          <div class="out dja">
+            <input type="password"
+            class="Input"
+            id="password"
+            name="password"
+            required/>
+          </div>
+          <p>Create New Password</p>
+        </div>
+        <div class="cover">
+          <div class="out dja">
+            <input type="password" class="Input" id="coPassword" name="copassword" required />
+          </div>
+          <p>Confirm Password</p>
+        </div>
+        <div id="radio_btn" class="dja">
+          <label for="male">
+            <div class="gender dja">
+              <input type="radio" value="male" name="gen" class="gn" required />
+              <p>Male</p>
+            </div>
+          </label>
+          <label for="female">
+            <div class="gender dja">
+              <input
+                type="radio"
+                value="female"
+                name="gen"
+                class="gn"
+                required
+              />
+              <p>Female</p>
+            </div>
+          </label>
+          <label for="other">
+            <div class="gender dja">
+              <input
+                type="radio"
+                value="other"
+                name="gen"
+                class="gn"
+                required
+              />
+              <p>Other</p>
+            </div>
+          </label>
+        </div>
+        <br />
+        <div class="submit_btn dja">Continue</div>
+        <br />
+        <p class="next_page dja">
+          Have an account?<a href="../index.html">Login account</a>
+        </p>
+        <br />
+      </form>
+    </div>
+    <div id="verification">
+      <div class="login_fild dja">
+        <form class="contaner dja">
+          <p class="heading dja">Verification<div id="back_btn"></div></p>
+          <br />
+          <h2>E-mail verification</h2>
+          <h5>We've e-mailed you a 4 digit code. check your e-mail and enter the code gere to complete the verification.</h5>
+
+          <label id="email_text"></label>
+          <div class="cover">
+            <div class="out dja">
+              <input
+                type="otp"
+                spellcheck="false"
+                name="otp"
+                class="otp"
+                required
+                autocomplete="off"
+                maxlength="1"
+              />
+              <input
+                type="otp"
+                spellcheck="false"
+                name="otp"
+                class="otp"
+                required
+                autocomplete="off"
+                maxlength="1"
+              />
+              <input
+                type="otp"
+                spellcheck="false"
+                name="otp"
+                class="otp"
+                required
+                autocomplete="off"
+                maxlength="1"
+              />
+              <input
+                type="otp"
+                spellcheck="false"
+                name="otp"
+                class="otp"
+                required
+                autocomplete="off"
+                maxlength="1"
+              />
+            </div>
+            <p>OTP</p>
+          </div>
+          <div id="reotp">Didn't receive OTP? <i>Resend</i></div>
+          <br />
+          <div name="submit" class="confirm_btn dja">Done</div>
+          <br />
+          <p class="next_page dja">
+            Have an account?<a href="../index.html">Login account</a>
+          </p>
+          <br />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

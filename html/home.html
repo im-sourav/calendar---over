@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/day-info.css" />
+    <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script defer src="../js/config.js"></script>
+    <script defer src="../js/main.js"></script>
+  </head>
+  <body>
+    <div id="fullScreen">
+      <div id="welcome-user"></div>
+    </div> 
+    <div id="logout">Sign Out</div>
+    <div id="copyright"><i>© </i>Sourav Barui 2022</div>
+    <div id="month-changes">
+      <div id="left-month"></div>
+      <header id="month-year-title">
+        <span>
+          <input type="text" id="month-input" />
+          <input type="number" id="year-input" />
+        </span>
+      </header>
+      <div id="right-month"></div>
+    </div>
+    <section></section>
+    <div id="open-tab"></div>
+
+    <div id="day-information" class="">
+      <div id="show-date-detalse">
+        <div id="show-date-and-close">
+          <div id="day-inf-date">07-07-2001</div>
+          <div id="show-day-name">Saterday</div>
+          <div id="day-inf-close-btn"><span></span></div>
+        </div>
+        <div id="info-scroll-list">
+          <div id="scroll-card"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="add-member-floting-window" class="">
+      <span>
+        <input type="date" id="add-new-input" />
+        <input
+          type="text"
+          placeholder="Why Special Day ? Like Birthday"
+          id="input-why-special"
+          spellcheck="false"
+        />
+        <input
+          type="text"
+          placeholder="Person Name"
+          id="input-person-name"
+          spellcheck="false"
+        />
+        <textarea
+          name="about"
+          id="input-note"
+          cols="10"
+          rows="5"
+          placeholder="Small Note"
+          spellcheck="false"
+        ></textarea>
+      </span>
+      <div id="color-pickeer">
+        <span class="select"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="add-member-button">
+        <div id="close">CLOSE</div>
+        <span></span>
+      </div>
+    </div>
+    <main>
+      <div id="member-list">
+        <div id="scroll"></div>
+      </div>
+      <div id="open-new-m-t">
+        <p>ADD NEW</p>
+      </div>
+    </main>
+  </body>
+</html>
