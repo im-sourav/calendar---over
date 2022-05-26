@@ -46,7 +46,7 @@ function checkCookie() {
     user = user.split("-");
     signInWithEmailAndPassword(auth, user[0], user[1]).then(
       (userCredential) => {
-        location.replace("html/home.html");
+        location.replace("./html/home.html");
       }
     );
   }
@@ -195,7 +195,7 @@ submitBtn.addEventListener("click", () => {
           }
           get(child(dbRef, `users/${userId}`)).then((snapshot) => {
             localStorage.setItem("sb-calendar-userName", snapshot.val().name);
-            location.replace("../html/home.html");
+            location.replace("./html/home.html");
           });
         })
         .catch((error) => {});
